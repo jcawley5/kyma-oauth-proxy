@@ -14,3 +14,11 @@ data:
   SYSTEM_URL: {{ .Values.system_url | quote }}
   API_SPECIFICATION_URL: {{ template "api_spec_url_value" . }}
   OAUTH_URL: {{ template "oauth_proxy_service" . }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "bundle.fullname" . }}-{{ .Values.apiRegistrationJobName }}-api
+  labels:
+    app: {{ template "bundle.fullname" . }}
+    component: {{ template "bundle.fullname" . }}-{{ .Values.apiRegistrationJobName }}
