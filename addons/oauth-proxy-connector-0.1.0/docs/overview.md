@@ -12,7 +12,7 @@ The Connector allows you to integrate an application by registering its APIs.  T
 1. Navigate to the **Runtimes** view under **Extensibility** in SAP C/4HANA cockpit and click on the cluster that you will be using
 2. Register a new system providing an appropriate name (e.g. 'mysystem')
 3. Click **Kyma Console**.
-4. In the Console, choose the Namespace, go to **Catalog** and select **[Preview] Kyma oAuth Proxy - Connector**.
+4. In the Console, choose the Namespace, go to **Catalog** and select **[Preview] oAuth Proxy - Connector**.
 5. Click **Add once** to install and configure the Connector:
 
     | Parameter              | Description                                                                     |
