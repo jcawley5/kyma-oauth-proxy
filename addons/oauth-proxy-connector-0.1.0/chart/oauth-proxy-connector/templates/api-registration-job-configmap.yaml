@@ -13,6 +13,8 @@ data:
   API_DESCRIPTION: "APIs"
   SYSTEM_URL: {{ .Values.system_url | quote }}
   API_SPECIFICATION_URL: {{ template "api_spec_url_value" . }}
+  CLIENT_ID: "dummy"
+  CLIENT_SECRET: "dummy"
   OAUTH_URL: {{ template "oauth_proxy_service" . }}
 ---
 apiVersion: v1

@@ -45,9 +45,7 @@
                         "description": "Internal Server Error - Unexpected runtime error occurred. See ICM Application Log."
                     }
                 },
-                "tags": [
-                    "Entities API"
-                ],
+                "tags": [],
                 "externalDocs": {}
             },
             "put": {
@@ -71,9 +69,7 @@
                         "description": "Internal Server Error"
                     }
                 },
-                "tags": [
-                    "Entities API"
-                ],
+                "tags": [],
                 "externalDocs": {}
             },
             "delete": {
