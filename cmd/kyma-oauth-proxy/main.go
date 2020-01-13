@@ -14,11 +14,12 @@ import (
 )
 
 type config struct {
-	HTTPClient      *http.Client
-	oauthURL        string
-	headers         map[string]string
-	requestBodyForm map[string]string
-	dumpRequest     bool
+	HTTPClient       *http.Client
+	oauthURL         string
+	headers          map[string]string
+	requestBodyForm  map[string]string
+	dumpRequest      bool
+	removeAuthHeader bool
 }
 
 func main() {
@@ -45,6 +46,7 @@ func (c *config) initConfig() {
 	c.HTTPClient = &http.Client{Transport: tr}
 	flag.StringVar(&c.oauthURL, "oauthURL", "", "The url to proxy the call to")
 	flag.BoolVar(&c.dumpRequest, "dumpRequest", false, "will output the request to the logs")
+	flag.BoolVar(&c.removeAuthHeader, "removeAuthHeader", true, "will remove any authentication header set")
 	flag.StringToStringVar(&c.headers, "headers", map[string]string{}, "Header values passed as: h1=v1,h2=v2")
 	flag.StringToStringVar(&c.requestBodyForm, "requestBodyForm", map[string]string{}, "Request Body form parameters passed as: h1=v1,h2=v2")
 	flag.Parse()
@@ -77,6 +79,11 @@ func (c *config) proxyHandler(w http.ResponseWriter, req *http.Request) {
 	proxyReq.Header = req.Header
 	for key, val := range c.headers {
 		proxyReq.Header.Set(key, val)
+	}
+
+	//will unset any Authorization values
+	if c.removeAuthHeader {
+		proxyReq.Header.Set("Authorization", "")
 	}
 
 	// DumpRequest
