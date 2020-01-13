@@ -1,7 +1,7 @@
 name: oauth-kyma-connector
 version: 0.1.0
 description: "Extends the Kyma oauth connector, by providing request body parameters for oauth. It is not recommended for production scenarios."
-id: ef0cf2d7-f2ea-4f6f-b815-fdb73fe49bec
+id: ef0cf2d2-f1ea-4f6f-a183-fdb73fe49bec
 displayName: "[Preview] Kyma oAuth Proxy - Connector"
 tags: preview,oauth,connector
 labels:
