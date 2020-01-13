@@ -10,7 +10,7 @@ The Connector allows you to integrate an application by registering its APIs.  T
 ### Set up the Connector 
 
 1. Navigate to the **Runtimes** view under **Extensibility** in SAP C/4HANA cockpit and click on the cluster that you will be using
-2. Register a new system providing an appropriate name (e.g. 'fieldglass')
+2. Register a new system providing an appropriate name (e.g. 'mysystem')
 3. Click **Kyma Console**.
 4. In the Console, choose the Namespace, go to **Catalog** and select **[Preview] Kyma oAuth Proxy - Connector**.
 5. Click **Add once** to install and configure the Connector:
@@ -19,7 +19,7 @@ The Connector allows you to integrate an application by registering its APIs.  T
     | ---------------------- | ------------------------------------------------------------------------------- |
     | **Application Name**   | The name of the registered system from step 2.                                  |
     | **Cluster Domain**     | The domain of the Kyma cluster. For example, `demo.cluster.extend.cx.cloud.sap` |
-    | **Headers Parameters** | Headers to be sent in the request                                               |
-    | **System URL**         | The URL of your SAP Callidus ICM tenant. For example `https://xcore1.fgvms.com` |
-    | **Form Parameters**    | The username for API and Event authentication                                   |
+    | **Headers Parameters** | Headers to be sent in the oauth request                                         |
+    | **System URL**         | The URL of your APIs. For example `https://xcore1.fgvms.com`                    |
+    | **Form Parameters**    | The request body form parameters to be sent in the oauth request                |
     |                        |

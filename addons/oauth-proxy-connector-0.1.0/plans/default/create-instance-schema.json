@@ -31,6 +31,11 @@
       "type": "string",
       "title": "Cluster Domain",
       "description": "The domain of the cluster. For example, `demo.cluster.extend.cx.cloud.sap`"
+    },
+    "api_spec_url": {
+      "type": "string",
+      "title": "API Spec URL",
+      "description": "The URL of the API specification"
     }
   },
   "required": [
