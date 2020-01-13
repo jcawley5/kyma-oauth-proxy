@@ -12,5 +12,5 @@ data:
   APP_KIND: rest-with-apikey
   API_DESCRIPTION: "APIs"
   SYSTEM_URL: {{ .Values.system_url | quote }}
-  API_SPECIFICATION_URL: {{ .Values.api_spec_url | quote}}
+  API_SPECIFICATION_URL: {{ template "api_spec_url_value" . }}
   OAUTH_URL: {{ template "oauth_proxy_service" . }}
